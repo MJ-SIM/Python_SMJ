@@ -28,3 +28,14 @@ import re
 
 def solution(my_string):
     return sum(map(int, re.findall(r'[0-9]+', my_string)))
+
+https://school.programmers.co.kr/learn/courses/30/lessons/120889
+#삼각형의 완성조건
+def solution(sides):
+    sides.sort()
+    if sides[0] + sides[1] <= sides[2]:
+        return 2
+    if sides[0] + sides[1] >= sides[2]:
+        return 1
+
+solution([199, 72, 222])
