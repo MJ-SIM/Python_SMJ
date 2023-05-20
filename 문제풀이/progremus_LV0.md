@@ -39,3 +39,28 @@ def solution(sides):
         return 1
 
 solution([199, 72, 222])
+
+https://school.programmers.co.kr/learn/courses/30/lessons/120956
+#옹알이(정규표현식)
+import re
+
+def solution(babbling):
+    count = 0
+    p = ["aya", "ye", "woo", "ma"]
+    for i in babbling:
+        print('------------')
+        print(i)
+        for pattern in p:
+            i = re.sub(pattern, ' ', i)
+            print(i)
+        if i.replace(' ', '') == '':
+            count += 1
+    return count
+
+https://school.programmers.co.kr/learn/courses/30/lessons/120913
+#잘라서 배열로 저장하기
+def solution(my_str, n):
+    l=[]
+    for i in range(0,len(my_str),n):
+        l.append(my_str[i:i+n])
+    return l
